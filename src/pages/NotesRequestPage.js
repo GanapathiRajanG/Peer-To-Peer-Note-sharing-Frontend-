@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { sharesAPI, usersAPI } from '../services/api';
+import { sharesAPI } from '../services/api';
 import '../styles/NotesRequestPage.css';
 
 export default function NotesRequestPage() {
   const [requests, setRequests] = useState([]);
-  const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [filter, setFilter] = useState('all');
-  const [showRequestForm, setShowRequestForm] = useState(false);
-  const [selectedUserId, setSelectedUserId] = useState('');
-  const [selectedNoteId, setSelectedNoteId] = useState('');
 
   useEffect(() => {
     fetchData();
@@ -19,12 +15,8 @@ export default function NotesRequestPage() {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const [reqs, usersList] = await Promise.all([
-        sharesAPI.getRequests(),
-        usersAPI.list()
-      ]);
+      const reqs = await sharesAPI.getRequests();
       setRequests(reqs);
-      setUsers(usersList.filter(u => u.id !== JSON.parse(localStorage.getItem('user')).id));
     } catch (err) {
       console.error('Error fetching data:', err);
       setError(err.message);
@@ -48,23 +40,6 @@ export default function NotesRequestPage() {
       await sharesAPI.rejectRequest(id);
       setRequests(requests.map(r => r.id === id ? { ...r, status: 'rejected' } : r));
       setError('');
-    } catch (err) {
-      setError(err.message);
-    }
-  };
-
-  const handleRequestNote = async (e) => {
-    e.preventDefault();
-    try {
-      if (!selectedUserId) {
-        setError('Please select a user');
-        return;
-      }
-      
-      // This would require fetching the user's notes first
-      // For now, we'll show a message that this requires selecting from available notes
-      setError('Note: You need to view a user\'s profile to request their notes');
-      setShowRequestForm(false);
     } catch (err) {
       setError(err.message);
     }
