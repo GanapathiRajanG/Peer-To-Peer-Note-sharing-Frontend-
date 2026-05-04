@@ -1,8 +1,12 @@
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL = process.env.REACT_APP_API_URL || '';
 
 const getAuthToken = () => localStorage.getItem('token');
 
 const apiCall = async (endpoint, options = {}) => {
+  if (!API_BASE_URL) {
+    throw new Error('Backend not configured. Set REACT_APP_API_URL in Vercel or run the backend locally.');
+  }
+
   const headers = {
     'Content-Type': 'application/json',
     ...options.headers,
