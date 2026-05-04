@@ -1,0 +1,214 @@
+.profile-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.profile-box {
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.profile-header {
+  background: #f0f0f0;
+  color: #333;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  border-bottom: 1px solid #ddd;
+}
+
+.profile-avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+
+.profile-avatar svg {
+  width: 100px;
+  height: 100px;
+}
+
+.profile-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.3s;
+}
+
+.avatar-label:hover {
+  opacity: 0.8;
+}
+
+.avatar-text {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.profile-title h1 {
+  margin: 0 0 8px 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.profile-title p {
+  margin: 0;
+  color: #666;
+  font-size: 13px;
+}
+
+.profile-content {
+  padding: 30px;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-group {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.info-group:last-child {
+  border-bottom: none;
+}
+
+.info-group label {
+  display: block;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.info-group p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #333;
+  background: #fafafa;
+}
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btn-edit,
+.btn-save,
+.btn-cancel {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.btn-edit {
+  background: #333;
+  color: white;
+  width: 100%;
+}
+
+.btn-edit:hover {
+  background: #555;
+}
+
+.btn-save {
+  background: #27ae60;
+  color: white;
+  flex: 1;
+}
+
+.btn-save:hover {
+  background: #229954;
+}
+
+.btn-cancel {
+  background: #ddd;
+  color: #333;
+  flex: 1;
+}
+
+.btn-cancel:hover {
+  background: #ccc;
+}
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+}
+
+.stat {
+  background: white;
+  border-radius: 4px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.stat h3 {
+  font-size: 24px;
+  color: #333;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.stat p {
+  margin: 0;
+  color: #666;
+  font-size: 13px;
+}

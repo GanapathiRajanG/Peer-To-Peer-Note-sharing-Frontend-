@@ -1,0 +1,174 @@
+.requests-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.requests-header {
+  margin-bottom: 25px;
+}
+
+.requests-header h1 {
+  font-size: 28px;
+  color: #333;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.requests-header p {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+}
+
+.requests-filter {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.filter-btn:hover {
+  border-color: #333;
+  background: #f5f5f5;
+}
+
+.filter-btn.active {
+  background: #333;
+  color: white;
+  border-color: #333;
+}
+
+.requests-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.request-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.request-card:hover {
+  border-color: #333;
+  background: #f9f9f9;
+}
+
+.request-content {
+  flex: 1;
+  min-width: 200px;
+}
+
+.request-content h3 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.request-notes {
+  margin: 8px 0;
+  color: #666;
+  font-size: 13px;
+}
+
+.request-meta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.request-date {
+  color: #999;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.pending {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.status-badge.accepted {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.rejected {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.request-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-accept,
+.btn-reject {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.btn-accept {
+  background: #27ae60;
+  color: white;
+}
+
+.btn-accept:hover {
+  background: #229954;
+}
+
+.btn-reject {
+  background: #e74c3c;
+  color: white;
+}
+
+.btn-reject:hover {
+  background: #c0392b;
+}
+
+.action-message {
+  padding: 6px 14px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #666;
+}
+
+.no-requests {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}

@@ -1,0 +1,209 @@
+.admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.admin-header {
+  margin-bottom: 30px;
+}
+
+.admin-header h1 {
+  font-size: 28px;
+  color: #333;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.admin-header p {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+}
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-card h3 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #667eea;
+  margin: 0 0 8px 0;
+}
+
+.stat-card p {
+  color: #666;
+  font-size: 13px;
+  margin: 0;
+}
+
+.admin-filter {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.filter-btn:hover {
+  border-color: #333;
+  background: #f5f5f5;
+}
+
+.filter-btn.active {
+  background: #333;
+  color: white;
+  border-color: #333;
+}
+
+.accounts-table {
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  font-size: 13px;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  color: #666;
+  font-size: 13px;
+}
+
+tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.banned {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-ban,
+.btn-delete {
+  padding: 4px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.btn-ban {
+  background: #ffc107;
+  color: white;
+}
+
+.btn-ban:hover {
+  background: #e0a800;
+}
+
+.btn-ban.unban {
+  background: #28a745;
+}
+
+.btn-ban.unban:hover {
+  background: #218838;
+}
+
+.btn-delete {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #c82333;
+}
+
+.no-accounts {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+@media (max-width: 768px) {
+  .accounts-table {
+    overflow-x: scroll;
+  }
+
+  table {
+    min-width: 600px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .btn-ban,
+  .btn-delete {
+    width: 100%;
+  }
+}

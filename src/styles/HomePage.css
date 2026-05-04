@@ -1,0 +1,141 @@
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.home-header h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.home-header p {
+  font-size: 16px;
+  color: #666;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: #f0f0f0;
+  color: #333;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.stat-card h3 {
+  font-size: 28px;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+.stat-card p {
+  font-size: 14px;
+  margin: 0;
+  color: #666;
+}
+
+.actions-section {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: inline-block;
+}
+
+.action-btn.primary {
+  background: #333;
+  color: white;
+}
+
+.action-btn.primary:hover {
+  background: #555;
+}
+
+.action-btn.secondary {
+  background: white;
+  color: #333;
+  border: 1px solid #333;
+}
+
+.action-btn.secondary:hover {
+  background: #f0f0f0;
+}
+
+.recent-notes-section {
+  margin-top: 25px;
+}
+
+.recent-notes-section h2 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.note-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.note-card:hover {
+  border-color: #333;
+  background: #f9f9f9;
+}
+
+.note-card h3 {
+  color: #333;
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.note-card p {
+  color: #666;
+  margin: 6px 0;
+  font-size: 12px;
+}
+
+.note-date {
+  color: #999;
+  font-size: 11px;
+}

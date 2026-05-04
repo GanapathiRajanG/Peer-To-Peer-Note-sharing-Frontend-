@@ -1,0 +1,278 @@
+.notes-list-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.notes-header h1 {
+  font-size: 28px;
+  color: #333;
+  margin: 0;
+  font-weight: 600;
+}
+
+.btn-create {
+  padding: 10px 20px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-create:hover {
+  background: #555;
+}
+
+.note-form {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.note-form .form-group {
+  margin-bottom: 15px;
+}
+
+.note-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.note-form input,
+.note-form textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.note-form input:focus,
+.note-form textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn-save {
+  padding: 8px 16px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.btn-save:hover {
+  background: #5568d3;
+}
+
+.btn-cancel {
+  padding: 8px 16px;
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.btn-cancel:hover {
+  background: #e0e0e0;
+}
+
+.notes-controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 150px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.filter-btn:hover {
+  border-color: #333;
+  background: #f5f5f5;
+}
+
+.filter-btn.active {
+  background: #333;
+  color: white;
+  border-color: #333;
+}
+
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.note-item {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.note-item:hover {
+  border-color: #333;
+  background: #f9f9f9;
+}
+
+.note-info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.note-info h3 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.note-meta {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+
+.note-date {
+  color: #999;
+}
+
+.note-status {
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.note-status.published {
+  background: #d4edda;
+  color: #155724;
+}
+
+.note-status.draft {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.note-tags {
+  display: flex;
+  gap: 6px;
+}
+
+.tag {
+  display: inline-block;
+  background: #f0f0f0;
+  color: #666;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+}
+
+.note-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-view,
+.btn-edit,
+.btn-share,
+.btn-delete {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.btn-view:hover,
+.btn-edit:hover {
+  border-color: #333;
+  color: #333;
+}
+
+.btn-share:hover {
+  background: #333;
+  color: white;
+  border-color: #333;
+}
+
+.btn-delete:hover {
+  background: #dc3545;
+  color: white;
+  border-color: #dc3545;
+}
+
+.no-notes {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}
