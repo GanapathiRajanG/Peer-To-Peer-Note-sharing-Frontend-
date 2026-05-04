@@ -6,6 +6,9 @@
 /.pnp
 .pnp.js
 
+# local database
+/server/notes_sharing.db
+
 # testing
 /coverage
 
